@@ -4,5 +4,6 @@ cp='target/playground-io-0.1-SNAPSHOT.jar:target/dependency/*'
 
 mvn clean package
 java -cp $cp Base64Test prepare 
-java -XX:StartFlightRecording=dumponexit=true,settings=settings.jfc,filename=target/recording.jfr -cp $cp -Xmx32m Base64Test
+java -XX:StartFlightRecording=dumponexit=true,settings=settings.jfc,filename=target/commons.jfr -cp $cp -Xmx32m Base64Test
+java -XX:StartFlightRecording=dumponexit=true,settings=settings.jfc,filename=target/jdk.jfr -cp $cp -Xmx32m Base64Test jdk
 
